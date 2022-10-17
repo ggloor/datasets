@@ -35,7 +35,7 @@ conds.16S <- c(rep("PUP",198), rep("CENT",161))
 
 Fourth, a single cell transcriptome dataset 
 
-conds.ss <- c(rep('cyt', 1500), rep('mem', 1500))
+conds.ss <- c(rep('cyt', 1000), rep('mem', 1000))
 
 Fifth
 
