@@ -3,7 +3,9 @@ nearest_balance*
 pTox*
 scaled/*
 gusA.tsv
-*.Rda
+ss.effect.Rda
+barton.d.agg.t.Rda
+tox.n0.Rda
 disp-v-abund.pdf
 RNA_seq_wplasmid.txt
 Table1.tsv
