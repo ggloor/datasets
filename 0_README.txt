@@ -42,9 +42,9 @@ Fifth
 a meta-transcriptome dataset 
 
   # pull out the H and BV samples
-  h.24 <- c("001B", "002B", "004B", "006B", "009B", "010B", "015B", "020B")
+  h.24 <- c("X001B", "X002B", "X004B", "X006B", "X009B", "X010B", "X020B")
 
-  bv.24 <- c("006A", "008A", "009A", "010A", "012B", "014B", "018B", "017B", "012A", "013A")
+  bv.24 <- c("X006A", "X008A", "X009A", "X010A", "X012B", "X014B", "X018B", "X017B", "X012A", "X013A")
 
   d.24 <- data.frame(d.24.init[,h.24], d.24.init[,bv.24], check.names=F)
 

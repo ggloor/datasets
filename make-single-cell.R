@@ -37,18 +37,18 @@ rownames(dt.keep) <- paste('B', rownames(dt.keep), sep='')
  
 both.filt <- rbind(ct.keep, dt.keep) # 2376 cytotoxic, 2339 memory, 1508 genes
 
-# reduce to 1500 samples chosen at random from each
+# reduce to 1000 samples chosen at random from each
 ct.me <- rbind(ct.keep[1:1000,], dt.keep[1:1000,])
 
-both.clr <- apply(ct.me+0.3, 1, function(x) log(x) - mean(log(x)))
-group <- c(rep('red', 1500), rep('blue', 1500))
+ss.clr <- apply(ct.me+0.3, 1, function(x) log(x) - mean(log(x)))
+group <- c(rep('red', 1000), rep('blue', 1000))
 
-pcx <- prcomp(t(both.clr))
+pcx <- prcomp(t(ss.clr))
 plot(pcx$x[,1], pcx$x[,2], col=group, pch=19, cex=0.5)
 
 # without outlier removal this was useless since ordination
 # separated outliers only
 # with outlier removal looks OK, and separates on second dimension 
-y.umap <- umap(t(both.clr))
+y.umap <- umap(t(ss.clr))
 
 plot(y.umap$layout[,1],y.umap$layout[,2], col=group, pch=19, cex=0.3)
